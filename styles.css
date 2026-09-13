@@ -232,18 +232,27 @@ button { font-family: inherit; }
 
 .slides {
   flex: 1;
+  min-height: 0;
   overflow: auto;
-  padding: 36px 52px 30px;
+  padding: 24px 36px 20px;
+  display: flex;
+  flex-direction: column;
 }
 
 .slide {
   display: none;
+  width: 100%;
   max-width: 1100px;
   margin: 0 auto;
   animation: rise .32s ease;
 }
 
-.slide.is-on { display: block; }
+.slide.is-on {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  min-height: 100%;
+}
 .slide[hidden] { display: none !important; }
 
 @keyframes rise {
@@ -351,12 +360,16 @@ p { font-size: 17px; line-height: 1.75; color: #3d5366; }
 .cover {
   position: relative;
   overflow: hidden;
+  flex: 1;
+  min-height: 100%;
+  display: flex;
+  flex-direction: column;
   background:
     radial-gradient(circle at 88% 18%, rgba(34, 211, 238, .18), transparent 26%),
     linear-gradient(145deg, #0b2b4a 0%, #07182c 58%, #04101f 100%);
   color: #fff;
   border-radius: 28px;
-  padding: 46px 46px 38px;
+  padding: 46px 46px 32px;
   border: 1px solid rgba(103, 232, 249, .16);
 }
 
@@ -413,7 +426,8 @@ p { font-size: 17px; line-height: 1.75; color: #3d5366; }
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   gap: 12px;
-  margin-top: 26px;
+  margin-top: auto;
+  padding-top: 28px;
 }
 
 .person {
@@ -833,7 +847,7 @@ tbody tr:hover td { background: #d7f3fb; }
   .card h3 { font-size: 20px; }
   .lead { font-size: 17px; }
   .grid-2, .grid-3, .grid-4, .people, .er, .wire { grid-template-columns: 1fr; }
-  .cover { padding: 28px 20px; }
+  .cover { padding: 28px 20px 24px; min-height: 100%; }
   .cover h1 { font-size: 42px; }
   .topbar, .controls { padding-left: 16px; padding-right: 16px; }
   .slide[data-fx="phase"] .card.phase::after { display: none; }
