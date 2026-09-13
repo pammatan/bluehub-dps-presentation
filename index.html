@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>BlueHub / DPS — เว็บไซต์นำเสนอ</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Thai:wght@400;500;600;700&family=Outfit:wght@500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="app">
+    <aside class="sidebar" id="sidebar">
+      <div class="brand">
+        <div class="logo" aria-hidden="true"><i></i><i></i><i></i></div>
+        <small>เว็บไซต์นำเสนอ</small>
+        <strong>BlueHub / DPS</strong>
+      </div>
+      <nav class="nav" id="nav"></nav>
+      <div class="side-foot">
+        รายวิชา วิเคราะห์และออกแบบระบบงานธุรกิจดิจิทัล<br />
+        อาจารย์กัลยารัตน์ ขาวภา
+      </div>
+    </aside>
+
+    <main class="stage">
+      <header class="topbar">
+        <div class="crumb"><button class="menu-btn" id="menuBtn" type="button">เมนู</button> <b id="pageTitle">หน้าปก</b></div>
+        <div class="progress" aria-hidden="true"><i id="bar"></i></div>
+      </header>
+
+      <div class="slides" id="slides">
+        <section class="slide is-on" data-title="หน้าปก" data-fx="cover">
+          <div class="cover">
+            <div class="cover-deco" aria-hidden="true"></div>
+            <div class="kicker">รายวิชา วิเคราะห์และออกแบบระบบงานธุรกิจดิจิทัล</div>
+            <h1>BlueHub / DPS</h1>
+            <div class="sub">Distance Per Stroke</div>
+            <p class="lead">แพลตฟอร์มว่ายน้ำครบวงจร ที่ช่วยให้โค้ชอ่านผลการแข่งและคลิปวิดีโอได้เร็วขึ้น ไม่ต้องไล่หาข้อมูลจากไฟล์ Excel หลายไฟล์</p>
+            <div class="people">
+              <div class="person"><b>นายจักรพันธ์ ชินโสภา</b><span>69419100002 · หาข้อมูลและจัดทำเว็บไซต์</span></div>
+              <div class="person"><b>นางสาวชุติกานต์ หาญกุดเลาะ</b><span>69419100004 · จัดทำนำเสนอและสรุปข้อมูล</span></div>
+              <div class="person"><b>นายพลพล กำมะถัน</b><span>69419100009 · นำเสนอและตรวจสอบความผิดพลาด</span></div>
+            </div>
+            <div class="meta">อาจารย์ผู้สอน อาจารย์กัลยารัตน์ ขาวภา · ปีการศึกษา 2569</div>
+          </div>
+        </section>
+
+        <section class="slide" hidden data-title="โปรเจกต์นี้คืออะไร" data-fx="steps">
+          <div class="kicker">01 · ภาพรวม</div>
+          <h2>ถ้าพูดสั้นๆ โปรเจกต์นี้ทำอะไร</h2>
+          <p class="lead">DPS เป็นธุรกิจกีฬาว่ายน้ำในไทย งานของเราคือออกแบบระบบดิจิทัลชื่อ BlueHub ให้ข้อมูลแข่ง ปฏิทิน กราฟ และคลิปวิดีโออยู่ในที่เดียว</p>
+          <div class="grid grid-3">
+            <article class="card">
+              <div class="num">1</div>
+              <h3>เก็บผลแข่ง</h3>
+              <p>นำผลการว่ายน้ำ เวลา และช่วงเวลาแต่ละระยะ เข้าสู่ระบบจากไฟล์ CSV หรือ Google Sheets</p>
+            </article>
+            <article class="card">
+              <div class="num">2</div>
+              <h3>ทำให้เห็นภาพ</h3>
+              <p>แปลงตัวเลขเป็นกราฟจังหวะความเร็ว เพื่อเทียบนักกีฬาข้ามสโมสรหรือข้ามรายการได้</p>
+            </article>
+            <article class="card">
+              <div class="num">3</div>
+              <h3>อ่านคลิปแข่ง</h3>
+              <p>โค้ชแท็กจุดที่นักกีฬาถึงแต่ละระยะบนวิดีโอ ระบบช่วยจับเวลา และมี AI เสนอจุดเวลาให้</p>
+            </article>
+          </div>
+          <p class="note">เป้าหมายไม่ใช่ทำเว็บสวยอย่างเดียว แต่ทำให้โค้ชตัดสินใจวางแผนซ้อมได้จากข้อมูลจริง</p>
+        </section>
+
+        <section class="slide" hidden data-title="คำที่ควรรู้ก่อน" data-fx="words">
+          <div class="kicker">02 · อ่านก่อนแล้วจะเข้าใจทุกหน้า</div>
+          <h2>คำในโปรเจกต์นี้หมายความว่าอะไร</h2>
+          <p class="lead">ถ้าเจอคำภาษาอังกฤษในสไลด์ถัดไป ให้ย้อนมาหน้านี้ได้ตลอด</p>
+          <div class="grid grid-2">
+            <article class="card word"><code>DPS</code><p><b>Distance Per Stroke</b> คือระยะทางที่ได้ต่อการวาดแขน 1 ครั้ง ยิ่งไกลโดยไม่เสียจังหวะ แปลว่ายิ่งมีประสิทธิภาพ</p></article>
+            <article class="card word"><code>Split</code><p>เวลาที่ใช้ในแต่ละช่วง เช่น จาก 0–15 เมตร, 15–25 เมตร ใช้ดูว่าช่วงไหนเร็วหรือช้า</p></article>
+            <article class="card word"><code>Pacing</code><p>จังหวะความเร็วตลอดทั้งเที่ยว หากออกตัวเร็วเกินแล้วหลังบ้านช้า กราฟจะเห็นชัด</p></article>
+            <article class="card word"><code>Cumulative</code><p>เวลาสะสมตั้งแต่จุดสตาร์ต จนถึงระยะนั้น เช่น ถึง 50 เมตร ใช้เวลาเท่าไรรวมทั้งหมด</p></article>
+            <article class="card word"><code>LCM</code><p>สระยาว 50 เมตร ตามมาตรฐานสากล ต่างจากสระสั้น 25 เมตร</p></article>
+            <article class="card word"><code>AI Suggest</code><p>ระบบช่วยเดาจุดเวลาในคลิป แล้วให้โค้ชกดยอมรับหรือแก้ได้เอง</p></article>
+          </div>
+        </section>
+
+        <section class="slide" hidden data-title="ธุรกิจและปัญหา" data-fx="problems">
+          <div class="kicker">03 · ข้อ 1 ข้อมูลธุรกิจ</div>
+          <h2>ธุรกิจเป็นอย่างไร และติดปัญหาตรงไหน</h2>
+          <p class="lead">DPS ทำทั้งจัดการแข่งขัน รายงานผล วิเคราะห์นักกีฬา เอเจนซี ทุนการศึกษา สื่อ และร้านค้าสปอร์ต แต่ข้อมูลยังกระจัดกระจาย</p>
+          <div class="grid grid-2">
+            <article class="card">
+              <div class="num">01</div>
+              <h3>ข้อมูลไม่รวมศูนย์</h3>
+              <p>ผลแข่งและ split อยู่ใน Excel / CSV หลายไฟล์ ค้นหาและเทียบกันยาก</p>
+            </article>
+            <article class="card">
+              <div class="num">02</div>
+              <h3>วิเคราะห์คลิปช้า</h3>
+              <p>โค้ชยังจับเวลาจากวิดีโอด้วยมือ ใช้เวลานาน ต่างจากเครื่องมืออย่าง Mako Vision</p>
+            </article>
+            <article class="card">
+              <div class="num">03</div>
+              <h3>ระบบไม่ต่อกัน</h3>
+              <p>ปฏิทินแข่ง รายงานผล กราฟ และวิดีโออยู่คนละที่ ต้องสลับโปรแกรมตลอด</p>
+            </article>
+            <article class="card">
+              <div class="num">04</div>
+              <h3>เทียบข้ามทีมยาก</h3>
+              <p>อยากรู้ว่านักกีฬาเราเร็วกว่าสโมสรอื่นตรงไหน ยังเทียบในที่เดียวไม่ได้</p>
+            </article>
+          </div>
+        </section>
+
+        <section class="slide" hidden data-title="ใครใช้ระบบ" data-fx="users">
+          <div class="kicker">04 · ผู้ใช้และเป้าหมาย</div>
+          <h2>ใครจะเข้ามาใช้ และเราอยากให้เขาได้อะไร</h2>
+          <p class="lead">BlueHub เป็น Digital Hub ของวงการว่ายน้ำ เปลี่ยนสถิติกับคลิปแข่งให้เป็นข้อมูลที่โค้ชใช้ตัดสินใจได้ทันที</p>
+          <div class="grid grid-3">
+            <article class="card"><h3>โค้ช</h3><p>ดูกราฟ pacing และแท็กคลิป เพื่อวางแผนซ้อม</p></article>
+            <article class="card"><h3>สโมสร</h3><p>ดูผลนักกีฬาทั้งทีมในที่เดียว</p></article>
+            <article class="card"><h3>นักกีฬา</h3><p>ทบทวนเวลาและช่วงที่ตัวเองพลาด</p></article>
+            <article class="card"><h3>ผู้จัดแข่งขัน</h3><p>ลงปฏิทินและรายงานผลการแข่ง</p></article>
+            <article class="card"><h3>ผู้ปกครอง</h3><p>ติดตามผลการแข่งของลูก</p></article>
+            <article class="card"><h3>Admin</h3><p>จัดการอีเวนต์ ผลแข่ง และสินค้า</p></article>
+          </div>
+        </section>
+
+        <section class="slide" hidden data-title="ระบบต้องทำอะไร" data-fx="table">
+          <div class="kicker">05 · ข้อ 2 Requirements</div>
+          <h2>สิ่งที่ระบบต้องมี เรียงตามความจำเป็น</h2>
+          <p class="lead"><b>Must</b> คือต้องมีในเวอร์ชันแรก · <b>Should</b> สำคัญแต่ยังรอได้ · <b>Could</b> มีก็ดี</p>
+          <table>
+            <thead><tr><th>รหัส</th><th>สิ่งที่ระบบทำ</th><th>ความสำคัญ</th></tr></thead>
+            <tbody>
+              <tr><td>R1</td><td>แสดงปฏิทินและสถานะการแข่งขัน</td><td><span class="tag must">Must</span></td></tr>
+              <tr><td>R2</td><td>รายงานผลการแข่ง พร้อมกรองข้อมูลและดู split</td><td><span class="tag must">Must</span></td></tr>
+              <tr><td>R3</td><td>นำเข้า CSV / Google Sheets แล้ววิเคราะห์ pacing</td><td><span class="tag must">Must</span></td></tr>
+              <tr><td>R4</td><td>เปรียบเทียบนักกีฬาข้ามสโมสรหรือข้ามรายการ</td><td><span class="tag must">Must</span></td></tr>
+              <tr><td>R5</td><td>แท็กเวลาที่ถึงแต่ละระยะบนวิดีโอ เช่น 15m จนถึงเส้นชัย</td><td><span class="tag must">Must</span></td></tr>
+              <tr><td>R6</td><td>AI ช่วยเสนอจุดเวลาในคลิป</td><td><span class="tag should">Should</span></td></tr>
+              <tr><td>R7</td><td>ส่งออก split เป็น CSV ไปวิเคราะห์ต่อ</td><td><span class="tag must">Must</span></td></tr>
+              <tr><td>R8</td><td>แอดมินจัดการอีเวนต์ ผลแข่ง และสินค้า</td><td><span class="tag must">Must</span></td></tr>
+              <tr><td>R9</td><td>หน้าร้านค้า เฟสแรกให้ติดต่อผ่าน Line</td><td><span class="tag could">Could</span></td></tr>
+              <tr><td>R10</td><td>หน้าเอเจนซี ทุนการศึกษา และสื่อ</td><td><span class="tag should">Should</span></td></tr>
+            </tbody>
+          </table>
+        </section>
+
+        <section class="slide" hidden data-title="ข้อกำหนดเชิงโครงสร้าง" data-fx="split">
+          <div class="kicker">06 · ข้อ 3 Structured Requirements</div>
+          <h2>แยกงานที่ระบบทำ กับคุณภาพที่ต้องมี</h2>
+          <div class="grid grid-2">
+            <article class="card">
+              <h3>Functional = สิ่งที่ผู้ใช้กดแล้วต้องเกิด</h3>
+              <ul>
+                <li>FR-01 นำเข้าผลว่ายน้ำ</li>
+                <li>FR-02 กรองเพศ รุ่นอายุ สโมสร นักกีฬา</li>
+                <li>FR-03 แสดงกราฟ Pacing / Cumulative</li>
+                <li>FR-04 แท็กคลิปด้วยมือหรือ AI</li>
+                <li>FR-05 คำนวณ split จากจุดสตาร์ต</li>
+                <li>FR-06 แอดมินล็อกอินแล้วจัดการข้อมูล</li>
+              </ul>
+            </article>
+            <article class="card">
+              <h3>Non-Functional = ใช้แล้วต้องรู้สึกอย่างไร</h3>
+              <ul>
+                <li>ใช้ผ่านเว็บได้ทุกหน้าจอ</li>
+                <li>อัปโหลดคลิปได้ประมาณ 200MB</li>
+                <li>แยกโปรแกรม AI ออกจากเว็บ ไม่ให้หน้าค้าง</li>
+                <li>รหัสผ่านแอดมินเก็บในเครื่องเซิร์ฟเวอร์</li>
+                <li>หน้าตาใช้สีน้ำเงิน–ฟ้าของแบรนด์ DPS</li>
+              </ul>
+            </article>
+          </div>
+          <article class="card accent" style="margin-top:16px">
+            <h3>ใครเกี่ยวข้องในระบบ</h3>
+            <p>โค้ช · นักกีฬาที่ดูผล · แอดมิน · และระบบ AI ที่ทำงานอยู่เบื้องหลัง โค้ชเป็นผู้ใช้หลักของหน้าวิเคราะห์วิดีโอ</p>
+          </article>
+        </section>
+
+        <section class="slide" hidden data-title="ออกแบบข้อมูล" data-fx="er">
+          <div class="kicker">07 · ข้อ 4–5 ER และฐานข้อมูล</div>
+          <h2>เก็บข้อมูลอย่างไรให้เทียบกันได้</h2>
+          <p class="lead">คิดง่ายๆ ว่า สโมสรมีนักกีฬาหลายคน แต่ละคนมีผลแข่งหลายรายการ และมีคลิปวิเคราะห์ของตัวเอง</p>
+          <div class="er">
+            <div class="entity"><header>CLUBS</header><p>สโมสร<br />id, ชื่อ</p></div>
+            <div class="entity"><header>ATHLETES</header><p>นักกีฬา<br />ชื่อ เพศ รุ่น อ้างอิงสโมสร</p></div>
+            <div class="entity"><header>EVENTS</header><p>รายการแข่ง<br />วัน สถานที่ สถานะ</p></div>
+            <div class="entity"><header>RESULTS</header><p>ผลแข่ง<br />อันดับ เวลา splits</p></div>
+            <div class="entity"><header>VIDEO_SESSIONS</header><p>คลิปที่กำลังวิเคราะห์<br />ลู่ สระ จุดสตาร์ต</p></div>
+            <div class="entity"><header>DISTANCE_MARKERS</header><p>จุดแท็กแต่ละระยะ<br />กี่เมตร วินาทีที่เท่าไร</p></div>
+            <div class="entity"><header>PRODUCTS</header><p>สินค้าในร้าน<br />ราคา หมวด รูป</p></div>
+            <div class="entity"><header>ANALYTICS</header><p>ชุดข้อมูลกราฟ<br />config และ data</p></div>
+          </div>
+          <p class="note">เฟสแรกใช้ PostgreSQL ผ่าน Drizzle ส่วนคลิปยังเก็บเป็นไฟล์ก่อน แล้วค่อยย้ายเป็นตารางจริง</p>
+        </section>
+
+        <section class="slide" hidden data-title="หน้าจอที่ออกแบบ" data-fx="wire">
+          <div class="kicker">08 · ข้อ 6 Wireframe</div>
+          <h2>หน้าวิเคราะห์วิดีโอใช้ยังไง</h2>
+          <p class="lead">ด้านซ้ายเล่นคลิป ด้านขวาแท็กระยะทีละจุด ออกแบบให้คล้ายเครื่องมือที่โค้ชคุ้น เช่น Mako Vision</p>
+          <div class="wire">
+            <article class="card">
+              <div class="player"><span class="play-dot"></span>VIDEO PLAYER</div>
+              <div class="keys">
+                <div class="key"><b>Space</b>เล่น / หยุด</div>
+                <div class="key"><b>A / D</b>ถอยหรือเดินเฟรม</div>
+                <div class="key"><b>S</b>ตั้งจุดสตาร์ต</div>
+                <div class="key"><b>Q</b>แท็กระยะปัจจุบัน</div>
+              </div>
+              <p style="margin-top:12px">มีปุ่ม AI Suggest ให้ระบบช่วยหาจุดเวลา และปุ่ม Export CSV เพื่อเอาตัวเลขไปเข้าหน้ากราฟ</p>
+            </article>
+            <article class="card">
+              <h3>นักกีฬา · LCM 100 เมตร</h3>
+              <p style="margin-bottom:12px">ความคืบหน้า 7 จาก 11 จุด</p>
+              <div class="marks">
+                <div class="mark">Start</div><div class="mark">15</div><div class="mark">25</div>
+                <div class="mark">35</div><div class="mark">45</div><div class="mark">50</div>
+                <div class="mark">65</div><div class="mark on">75 ถัดไป</div><div class="mark">85</div>
+                <div class="mark">95</div><div class="mark">Finish</div>
+              </div>
+            </article>
+          </div>
+        </section>
+
+        <section class="slide" hidden data-title="โค้ชได้อะไร" data-fx="out">
+          <div class="kicker">09 · ข้อ 7 Output</div>
+          <h2>เมื่อใช้ระบบแล้ว เห็นอะไรกลับมา</h2>
+          <p class="lead">ไม่จบแค่เก็บข้อมูล แต่ต้องได้คำตอบที่เอาไปวางแผนซ้อมได้</p>
+          <div class="grid grid-2">
+            <article class="card"><h3>กราฟ Pacing / Cumulative</h3><p>เทียบนักกีฬาข้างๆ กัน ดูว่าใครออกตัวเร็ว ใครมาแรงช่วงท้าย</p></article>
+            <article class="card"><h3>ตารางผลแข่ง + Split</h3><p>กรองตามรุ่น สโมสร แล้วชี้แถวไหนระบบไฮไลต์ให้</p></article>
+            <article class="card"><h3>การ์ดเวลาจากคลิป</h3><p>แต่ละระยะโชว์ทั้งเวลาช่วงนั้น และเวลารวมตั้งแต่สตาร์ต</p></article>
+            <article class="card"><h3>ไฟล์ CSV และหน้าแอดมิน</h3><p>ส่งออกไปวิเคราะห์ต่อได้ และแอดมินแก้ข้อมูลหลักได้เอง</p></article>
+          </div>
+          <article class="card accent" style="margin-top:16px">
+            <h3>ตัวอย่างที่อ่านง่าย</h3>
+            <p>ถึง 15 เมตร ใช้ +5.40 วินาที · ต่อไปอีกช่วงได้เวลาของช่วงนั้น · ถึงเส้นชัยได้เวลารวมทั้งเที่ยว โค้ชจะเห็นทันทีว่าช่วงไหนเร่งได้ หรือช่วงไหนตก</p>
+          </article>
+        </section>
+
+        <section class="slide" hidden data-title="เลือกเครื่องมือ" data-fx="tools">
+          <div class="kicker">10 · ข้อ 8 ทำไมเลือกแบบนี้</div>
+          <h2>เลือกเครื่องมือที่ทำต่อได้จริง</h2>
+          <p class="lead">แกนเว็บใช้ Next.js ส่วนงานวิเคราะห์คลิปที่ยาก แยกไปให้ Python ทำ คนละโปรแกรมกัน จะได้ไม่ทำให้หน้าเว็บค้าง</p>
+          <table>
+            <thead><tr><th>ใช้</th><th>ทำอะไร</th><th>ทำไมถึงเลือก</th><th>ไม่เลือก</th></tr></thead>
+            <tbody>
+              <tr><td>Next.js 14 + TypeScript</td><td>เว็บและ API</td><td>ทำครบในที่เดียว ลงเครื่องเซิร์ฟเวอร์ง่าย</td><td>Laravel / แยกหลายภาษา</td></tr>
+              <tr><td>Tailwind CSS</td><td>หน้าตา</td><td>จัดธีมสี DPS ได้เร็ว</td><td>Bootstrap</td></tr>
+              <tr><td>Recharts</td><td>กราฟ</td><td>ใช้กับ React ได้ตรง</td><td>Chart.js</td></tr>
+              <tr><td>Drizzle + PostgreSQL</td><td>ฐานข้อมูล</td><td>กำหนดตารางแบบมีชนิดข้อมูลชัด</td><td>Prisma / MongoDB</td></tr>
+              <tr><td>Python + OpenCV</td><td>อ่านวิดีโอ</td><td>เครื่องมือวิเคราะห์ภาพพร้อมกว่า</td><td>ฝัง AI ใน Next.js</td></tr>
+              <tr><td>Render.com</td><td>วางระบบจริง</td><td>มีทั้งเว็บและฐานข้อมูล</td><td>Vercel อย่างเดียว</td></tr>
+            </tbody>
+          </table>
+        </section>
+
+        <section class="slide" hidden data-title="วัดผลและความเป็นส่วนตัว" data-fx="safe">
+          <div class="kicker">11 · ข้อ 9–10 คุณภาพและความปลอดภัย</div>
+          <h2>รู้ได้อย่างไรว่าใช้ได้ และข้อมูลไม่รั่ว</h2>
+          <div class="grid grid-2">
+            <article class="card">
+              <h3>เกณฑ์ที่วัดได้</h3>
+              <ul>
+                <li>แท็กมือคลาดเคลื่อนไม่เกิน 0.3 วินาที</li>
+                <li>AI ถูกโค้ชยอมรับอย่างน้อยครึ่งหนึ่งในคลิปที่ชัด</li>
+                <li>แท็กครบ 100 เมตรไม่เกิน 10 นาที</li>
+                <li>หน้ากราฟโหลดไม่เกิน 3 วินาที</li>
+                <li>อัปโหลดคลิปสำเร็จอย่างน้อย 95%</li>
+                <li>แอดมินต้องมีรหัสผ่าน</li>
+              </ul>
+            </article>
+            <article class="card">
+              <h3>ดูแลข้อมูลตาม PDPA</h3>
+              <ul>
+                <li>เก็บชื่อ คลิป และสโมสรเท่าที่ต้องใช้</li>
+                <li>โค้ชหรือสโมสรต้องมีสิทธิ์คลิปก่อนอัปโหลด</li>
+                <li>แยกสิทธิ์แอดมินออกจากผู้ใช้ทั่วไป</li>
+                <li>คลิปไม่ออกนอกเครื่องวิเคราะห์โดยไม่จำเป็น</li>
+                <li>ลบไฟล์เมื่อเสร็จงาน หรือครบประมาณ 90 วัน</li>
+              </ul>
+            </article>
+          </div>
+        </section>
+
+        <section class="slide" hidden data-title="ทีมงาน" data-fx="team">
+          <div class="kicker">12 · ข้อ 11 บทบาทในกลุ่ม</div>
+          <h2>ใครทำอะไร</h2>
+          <p class="lead">กลุ่ม 3 คน แบ่งงานให้ครบทั้งหาข้อมูล ทำระบบ จัดนำเสนอ และตรวจทาน</p>
+          <div class="grid grid-3">
+            <article class="card">
+              <div class="num">01</div>
+              <h3>นายจักรพันธ์ ชินโสภา</h3>
+              <p>รหัส 69419100002<br /><b>หาข้อมูลและจัดทำเว็บไซต์</b><br />ศึกษาข้อมูลระบบ DPS แล้วพัฒนาเว็บ BlueHub ทั้งหน้าใช้งานและส่วนหลังบ้าน</p>
+            </article>
+            <article class="card">
+              <div class="num">02</div>
+              <h3>นางสาวชุติกานต์ หาญกุดเลาะ</h3>
+              <p>รหัส 69419100004<br /><b>จัดทำนำเสนอและหาข้อมูล</b><br />รวบรวมข้อมูลธุรกิจ ข้อกำหนด และจัดเนื้อหาให้อาจารย์อ่านตามได้</p>
+            </article>
+            <article class="card">
+              <div class="num">03</div>
+              <h3>นายพลพล กำมะถัน</h3>
+              <p>รหัส 69419100009<br /><b>ผู้นำเสนอและตรวจสอบความผิดพลาด</b><br />นำเสนอชิ้นงาน แล้วตรวจความถูกต้องของข้อมูล ระบบ และสไลด์</p>
+            </article>
+          </div>
+        </section>
+
+        <section class="slide" hidden data-title="แผนพัฒนา" data-fx="phase">
+          <div class="kicker">13 · ข้อ 12 ทำทีละเฟส</div>
+          <h2>ไม่ทำทุกอย่างพร้อมกัน</h2>
+          <p class="lead">ทำให้ใช้ได้ก่อน แล้วค่อยเพิ่มของยาก โดยโค้ชแก้จุดแท็กของ AI ได้เสมอ</p>
+          <div class="grid grid-4">
+            <article class="card phase"><div class="num">1</div><h3>แกนระบบ</h3><p>ปฏิทิน ผลแข่ง กราฟจาก CSV ร้านค้า และหน้าเกี่ยวกับเรา</p></article>
+            <article class="card phase"><div class="num">1.5</div><h3>ข้อมูลจริง</h3><p>ฐานข้อมูล หน้าแอดมิน และการชำระเงิน</p></article>
+            <article class="card phase"><div class="num">2</div><h3>วิเคราะห์คลิป</h3><p>แท็กด้วยมือและ AI มีหน้าแล้วที่ /analytics/video</p></article>
+            <article class="card phase"><div class="num">2.5</div><h3>ขยายต่อ</h3><p>นับจังหวะแขน ดูหลายลู่พร้อมกัน และใช้เครื่องที่แรงขึ้น</p></article>
+          </div>
+        </section>
+
+        <section class="slide" hidden data-title="สรุป" data-fx="sum">
+          <div class="kicker">14 · สรุปให้จำง่าย</div>
+          <h2>จำ 4 ประโยคนี้ก็เล่าโปรเจกต์ได้</h2>
+          <div class="grid grid-2">
+            <article class="card"><div class="num">1</div><h3>ปัญหา</h3><p>ข้อมูลแข่งกระจัดกระจาย ดูคลิปช้า และไม่มีระบบที่ต่อกันตั้งแต่ปฏิทินถึงวิดีโอ</p></article>
+            <article class="card"><div class="num">2</div><h3>ทางแก้</h3><p>BlueHub รวมผลแข่ง กราฟ คลิป และหน้าแอดมินไว้ในที่เดียว</p></article>
+            <article class="card"><div class="num">3</div><h3>วิธีทำงาน</h3><p>เว็บทำหน้าที่โชว์และเก็บข้อมูล ส่วน AI แยกไปอ่านคลิป โค้ชยังแก้จุดแท็กได้เอง</p></article>
+            <article class="card"><div class="num">4</div><h3>ผลที่อยากได้</h3><p>โค้ชใช้เวลาน้อยลงในการวิเคราะห์ และเอาข้อมูลระยะ × เวลาไปวางแผนซ้อมได้จริง</p></article>
+          </div>
+        </section>
+
+        <section class="slide" hidden data-title="ขอบคุณ" data-fx="thanks">
+          <div class="cover">
+            <div class="cover-deco" aria-hidden="true"></div>
+            <div class="kicker">จบการนำเสนอ</div>
+            <h1>ขอบคุณค่ะ / ครับ</h1>
+            <p class="lead">พร้อมรับคำถามจากอาจารย์กัลยารัตน์ ขาวภา</p>
+            <div class="people">
+              <div class="person"><b>จักรพันธ์ ชินโสภา</b><span>69419100002</span></div>
+              <div class="person"><b>ชุติกานต์ หาญกุดเลาะ</b><span>69419100004</span></div>
+              <div class="person"><b>พลพล กำมะถัน</b><span>69419100009</span></div>
+            </div>
+            <div class="meta">BlueHub / DPS · วิเคราะห์และออกแบบระบบงานธุรกิจดิจิทัล</div>
+          </div>
+        </section>
+      </div>
+
+      <footer class="controls">
+        <div class="hint">กดลูกศรซ้ายขวา หรือปุ่มด้านขวา · <span id="pageNum">1 / 16</span></div>
+        <div class="nav-btns">
+          <button type="button" id="prevBtn">ย้อนกลับ</button>
+          <button type="button" class="primary" id="nextBtn">หน้าถัดไป</button>
+        </div>
+      </footer>
+    </main>
+  </div>
+  <script src="app.js"></script>
+</body>
+</html>
