@@ -7,13 +7,16 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Thai:wght@400;500;600;700&family=Outfit:wght@500;600;700&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="styles.css?v=8" />
 </head>
 <body>
-  <div class="app">
+  <div class="sidebar-backdrop" id="sidebarBackdrop" hidden aria-hidden="true"></div>
+  <div class="app" id="app">
     <aside class="sidebar" id="sidebar">
       <div class="brand">
-        <div class="logo" aria-hidden="true"><i></i><i></i><i></i></div>
+        <button type="button" class="logo" id="sidebarLogoToggle" aria-label="ปิดเมนูด้านข้าง" aria-expanded="true" title="คลิกเพื่อปิดเมนู">
+          <i></i><i></i><i></i>
+        </button>
         <small>เว็บไซต์นำเสนอ</small>
         <strong>BlueHub / DPS</strong>
       </div>
@@ -26,8 +29,35 @@
 
     <main class="stage">
       <header class="topbar">
-        <div class="crumb"><button class="menu-btn" id="menuBtn" type="button">เมนู</button> <b id="pageTitle">หน้าปก</b></div>
-        <div class="progress" aria-hidden="true"><i id="bar"></i></div>
+        <div class="crumb">
+          <button type="button" class="sidebar-open-hint" id="sidebarOpenHint" hidden aria-label="เปิดเมนูด้านข้าง" title="เปิดเมนู">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M10 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </button>
+          <b id="pageTitle">หน้าปก</b>
+        </div>
+        <div class="topbar-actions">
+          <div class="progress" aria-hidden="true"><i id="bar"></i></div>
+          <div class="settings-menu" id="settingsMenu">
+            <button type="button" class="settings-menu__trigger" id="settingsMenuBtn" aria-label="ตั้งค่าการแสดงผล" aria-expanded="false" aria-haspopup="true" aria-controls="settingsMenuPanel" title="ตั้งค่า">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 15.5a3.5 3.5 0 1 0 0-7 3.5 3.5 0 0 0 0 7Z" fill="none" stroke="currentColor" stroke-width="2"/><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 1 1-2.83 2.83l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 1 1-4 0v-.09a1.65 1.65 0 0 0-1-1.51 1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 1 1-2.83-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 1 1 0-4h.09a1.65 1.65 0 0 0 1.51-1 1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 1 1 2.83-2.83l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 1 1 4 0v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 1 1 2.83 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9c.26.604.852.997 1.51 1H21a2 2 0 1 1 0 4h-.09a1.65 1.65 0 0 0-1.51 1Z" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </button>
+            <div class="settings-menu__panel" id="settingsMenuPanel" hidden role="menu">
+              <div class="settings-menu__section" role="none">
+                <span class="settings-menu__heading">ซูม</span>
+                <div class="zoom-controls" aria-label="การซูม">
+                  <button type="button" class="zoom-btn" id="zoomOut" aria-label="ซูมออก" title="ซูมออก">−</button>
+                  <span class="zoom-label" id="zoomLabel">100%</span>
+                  <button type="button" class="zoom-btn" id="zoomIn" aria-label="ซูมเข้า" title="ซูมเข้า">+</button>
+                  <button type="button" class="zoom-btn zoom-reset" id="zoomReset" aria-label="รีเซ็ตซูม" title="รีเซ็ตซูม">⟲</button>
+                </div>
+              </div>
+              <button type="button" class="settings-menu__item" id="fullscreenBtn" role="menuitem" aria-label="ขยายเต็มจอ" title="เต็มจอ">
+                <span class="settings-menu__item-icon" aria-hidden="true">⛶</span>
+                <span data-fs-label>เต็มจอ</span>
+              </button>
+            </div>
+          </div>
+        </div>
       </header>
 
       <div class="slides" id="slides">
@@ -349,7 +379,7 @@
       </div>
 
       <footer class="controls">
-        <div class="hint">กดลูกศรซ้ายขวา หรือปุ่มด้านขวา · <span id="pageNum">1 / 16</span></div>
+        <div class="hint">ลูกศรเปลี่ยนหน้า · Ctrl + / − ซูม · F เต็มจอ · <span id="pageNum">1 / 16</span></div>
         <div class="nav-btns">
           <button type="button" id="prevBtn">ย้อนกลับ</button>
           <button type="button" class="primary" id="nextBtn">หน้าถัดไป</button>
@@ -357,6 +387,6 @@
       </footer>
     </main>
   </div>
-  <script src="app.js"></script>
+  <script src="app.js?v=7"></script>
 </body>
 </html>
